@@ -4,11 +4,11 @@
 <%  posts.forEach((post)=>{ %>
 
 
-<a class="post-title" href="<%= post.link %>"> <%= post.title %> </a>
+<a class="post-title" href="posts/<%= post._id%>"> <%= post.title %> </a>
 <% let content = post.content; %>
 <% if(content.length>120) { %>
 <% let slicedContent = `${content.slice(0,120)}...` %>
-<p><%= slicedContent %> <a href="<%= post.link %>"> Read more</a> </p>
+<p><%= slicedContent %> <a href="posts/<%= post._id %>"> Read more</a> </p>
 
 <% } else { %>
 <p><%= post.content %> </p>
